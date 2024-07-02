@@ -32,6 +32,11 @@ Build do projeto no Docker:
 docker-compose up --build
 ```
 
+Link imagem Docker Hub:
+```link
+https://hub.docker.com/r/kaiko94/desafiomobiauto
+```
+
 
 ## Exemplos de Payloads
 Aqui estão exemplos de payloads para operações principais da API:
