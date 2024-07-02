@@ -1,0 +1,22 @@
+version: '3.8'
+services:
+  desafiobackend:
+    image: desafiobackend
+    environment:
+      SPRING_PROFILES_ACTIVE: prod
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: 123
+      SPRING_JPA_HIBERNATE_DDL-AUTO: update
+      JAVA_HOME: C:\Program Files\Java\jdk-21
+    ports:
+      - "8090:8080"
+    depends_on:
+      - db
+
+  db:
+    image: postgres
+    ports:
+      - "5433:5432"
+    environment:
+      POSTGRES_PASSWORD: 123
+      POSTGRES_DB: mobiautodb
